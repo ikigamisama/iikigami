@@ -80,20 +80,44 @@ const Profile = () => {
                 </ContactList>
               </ContactTextList>
 
-              <ButtonProfile color={config.color}>
+              <ButtonProfile
+                color={config.color}
+                onClick={() =>
+                  window.open(
+                    "https://github.com/ikigamisama/iikigami/raw/new_website/FranzMonzalesResume.pdf",
+                    "_blank",
+                  )
+                }
+              >
                 <ButtonDownloadIcon></ButtonDownloadIcon>
                 DOWNLOAD MY RESUME
               </ButtonProfile>
 
               <ButtonRows>
                 <ButtonCols1>
-                  <ButtonProfile color={"#844cb0"}>
+                  <ButtonProfile
+                    color={"#844cb0"}
+                    onClick={() =>
+                      window.open(
+                        "https://github.com/ikigamisama/iikigami/raw/new_website/Ikigami%20Resume.xd",
+                        "_blank",
+                      )
+                    }
+                  >
                     <ButtonXDIcon></ButtonXDIcon>
                     DOWNLOAD XD
                   </ButtonProfile>
                 </ButtonCols1>
                 <ButtonCols2>
-                  <ButtonProfile color={"#8BC3FC"}>
+                  <ButtonProfile
+                    color={"#8BC3FC"}
+                    onClick={() =>
+                      window.open(
+                        "/ikigamisama/iikigami/raw/new_website/Ikigami%20Resume-xd.psd",
+                        "_blank",
+                      )
+                    }
+                  >
                     <ButtonPSIcon></ButtonPSIcon>
                     DOWNLOAD PS
                   </ButtonProfile>
