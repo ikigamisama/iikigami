@@ -15,11 +15,13 @@ import {
 import { serviceList } from "./config";
 
 const Services = () => {
-  const { config } = useContext(ConfigContext);
+  const { config, onFormatColorText } = useContext(ConfigContext);
   return (
     <ServicesContainer theme={config.theme}>
       <ServicesWrapper>
-        <SectionTitle color={config.color}>SERVICES</SectionTitle>
+        <SectionTitle color={onFormatColorText(config.color)}>
+          SERVICES
+        </SectionTitle>
         <SectionSubTitle theme={config.theme}>
           What can i do for you ?
         </SectionSubTitle>

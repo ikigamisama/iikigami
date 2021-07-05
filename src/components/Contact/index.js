@@ -24,7 +24,7 @@ import { BiCheckCircle } from "react-icons/bi";
 import { AiOutlineExclamationCircle } from "react-icons/ai";
 
 const Contact = () => {
-  const { config } = useContext(ConfigContext);
+  const { config, onFormatColorText } = useContext(ConfigContext);
   const [sendEmailResult, setEmailResult] = useState({
     loading: false,
     success: false,
@@ -67,7 +67,9 @@ const Contact = () => {
   return (
     <ContactContainer theme={config.theme}>
       <ContactWrapper>
-        <SectionTitle color={config.color}>CONTACT</SectionTitle>
+        <SectionTitle color={onFormatColorText(config.color)}>
+          CONTACT
+        </SectionTitle>
         <SectionSubTitle theme={config.theme}>
           There are many variations of passages of communicate me. For some
           projects and consulting regarding on their web app, software, Etc,
@@ -89,6 +91,7 @@ const Contact = () => {
           <ContactForm onSubmit={sendEmail}>
             <ContactTextField
               colorform={config.color}
+              theme={config.theme}
               type="text"
               required
               fullWidth
@@ -97,6 +100,7 @@ const Contact = () => {
             />
             <ContactTextField
               colorform={config.color}
+              theme={config.theme}
               type="email"
               required
               fullWidth
@@ -105,6 +109,7 @@ const Contact = () => {
             />
             <ContactTextField
               colorform={config.color}
+              theme={config.theme}
               type="text"
               required
               fullWidth
@@ -113,6 +118,7 @@ const Contact = () => {
             />
             <ContactTextField
               colorform={config.color}
+              theme={config.theme}
               type="text"
               multiline
               rows={4}
@@ -136,15 +142,18 @@ const Contact = () => {
             </ContactSubmitButton>
           </ContactForm>
         </ContactFromWrapper>
-
         <ContactDetailList>
           {contactDetail.map((list, i) => (
             <ContactDetailCol key={i}>
               <ContactDetailIcons color={config.color}>
                 <list.icon />
               </ContactDetailIcons>
-              <ContactDetailTitle>{list.title}</ContactDetailTitle>
-              <ContactDetailContent>{list.details}</ContactDetailContent>
+              <ContactDetailTitle theme={config.theme}>
+                {list.title}
+              </ContactDetailTitle>
+              <ContactDetailContent theme={config.theme}>
+                {list.details}
+              </ContactDetailContent>
             </ContactDetailCol>
           ))}
         </ContactDetailList>

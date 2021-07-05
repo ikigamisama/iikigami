@@ -42,7 +42,7 @@ export const SectionSubTitle = styled.p`
 export const SectionBorder = styled.div`
   width: 75px;
   height: 5px;
-  background-color: ${(props) => props.color};
+  background: ${(props) => props.color};
   margin: 0 auto 50px auto;
 `;
 
@@ -84,7 +84,7 @@ export const ResumeYearWrapper = styled.div`
   align-items: center;
   justify-content: center;
   color: white;
-  background-color: ${(props) => props.color};
+  background: ${(props) => props.color};
   margin-right: 25px;
 
   @media screen and (max-width: 768px) {

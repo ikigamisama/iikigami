@@ -17,12 +17,14 @@ import {
 import { skill } from "./config";
 
 const Skills = () => {
-  const { config } = useContext(ConfigContext);
+  const { config, onFormatColorText } = useContext(ConfigContext);
 
   return (
     <SkillsContainer theme={config.theme}>
       <SkillWrapper>
-        <SectionTitle color={config.color}>MY SKILLS & EXPERTIES</SectionTitle>
+        <SectionTitle color={onFormatColorText(config.color)}>
+          MY SKILLS & EXPERTIES
+        </SectionTitle>
         <SectionSubTitle theme={config.theme}>
           I cherish what I do. I take awesome delight in what I do. And
           sometimes I can't do something in the middle or even three-fourths,

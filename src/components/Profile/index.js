@@ -33,11 +33,13 @@ import {
 import profileImg from "../../assets/img/profile.png";
 
 const Profile = () => {
-  const { config } = useContext(ConfigContext);
+  const { config, onFormatColorText } = useContext(ConfigContext);
   return (
     <ProfileContainer theme={config.theme} id="profile">
       <ProfileWrapper>
-        <SectionTitle color={config.color}>PROFILE</SectionTitle>
+        <SectionTitle color={onFormatColorText(config.color)}>
+          PROFILE
+        </SectionTitle>
         <ProfileRow>
           <ProfileColumn1>
             <TextWrapper>

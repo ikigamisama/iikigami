@@ -1,0 +1,10 @@
+.setting-wrap-open {
+  right: 0 !important;
+}
+.setting-wrap-close {
+  right: -250px !important;
+}
+
+.MuiSelect-selectMenu {
+  display: flex;
+}

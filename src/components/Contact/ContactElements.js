@@ -42,7 +42,7 @@ export const SectionSubTitle = styled.p`
 export const SectionBorder = styled.div`
   width: 75px;
   height: 5px;
-  background-color: ${(props) => props.color};
+  background: ${(props) => props.color};
   margin: 0 auto 50px auto;
 `;
 
@@ -58,6 +58,16 @@ export const ContactForm = styled.form``;
 export const ContactTextField = styled(TextField)`
   margin-bottom: 18px !important;
   font-family: "Poppins", serif !important;
+  > .MuiFormLabel-root {
+    color: ${({ theme }) => (theme === "light" ? "#000" : "#fff")} !important;
+  }
+  > .MuiInputBase-root {
+    color: ${({ theme }) => (theme === "light" ? "#000" : "#fff")} !important;
+  }
+  > .MuiInput-underline::before {
+    border-bottom: 1px solid
+      ${({ theme }) => (theme === "light" ? "#000" : "#fff")} !important;
+  }
   > .MuiInput-underline::after {
     border: 1px solid ${(props) => props.colorform} !important;
   }
@@ -67,7 +77,7 @@ export const ContactTextField = styled(TextField)`
 `;
 
 export const ContactSubmitButton = styled(Button)`
-  background-color: ${(props) => props.colorbutton} !important;
+  background: ${(props) => props.colorbutton} !important;
   color: white !important;
   font-family: "Poppins", serif !important;
 `;
@@ -107,14 +117,14 @@ export const ContactDetailIcons = styled.div`
 export const ContactDetailTitle = styled.h5`
   text-align: center;
   font-size: 24px;
-  color: ${({ theme }) => (theme === "light" ? "#fff" : "#000")};
+  color: ${({ theme }) => (theme === "light" ? "#000" : "#fff")};
   margin-bottom: 15px;
 `;
 
 export const ContactDetailContent = styled.p`
   text-align: center;
   font-size: 1rem;
-  color: ${({ theme }) => (theme === "light" ? "#fff" : "#000")};
+  color: ${({ theme }) => (theme === "light" ? "#000" : "#fff")};
 `;
 
 export const ContactResponseEmail = styled.div`

@@ -79,7 +79,7 @@ export const ContentText = styled.p`
 `;
 
 export const ContentBorder = styled.div`
-  background-color: ${(props) => props.color};
+  background: ${(props) => props.color};
   width: 50px;
   height: 7.5px;
   margin-bottom: 25px;
@@ -134,7 +134,7 @@ export const ContactContent = styled.p`
 
 export const ButtonProfile = styled.a`
   position: relative;
-  background-color: ${(props) => props.color};
+  background: ${(props) => props.color};
   color: white;
   width: 100%;
   cursor: pointer;

@@ -23,8 +23,8 @@ import {
 } from "./ResumeElements";
 
 const Resume = () => {
+  const { config, onFormatColorText } = useContext(ConfigContext);
   const [resumeExpand, setResumeExpand] = useState(resumeList);
-  const { config } = useContext(ConfigContext);
 
   const resumeExpandClick = (index, toExpand) => {
     let newResumeData = [...resumeExpand];
@@ -35,7 +35,9 @@ const Resume = () => {
   return (
     <ResumeContainer theme={config.theme}>
       <ResumeWrapper>
-        <SectionTitle color={config.color}>RESUME</SectionTitle>
+        <SectionTitle color={onFormatColorText(config.color)}>
+          RESUME
+        </SectionTitle>
         <SectionSubTitle theme={config.theme}>
           If you call failures experiments, you can put them in your resume and
           claim them as achievements.

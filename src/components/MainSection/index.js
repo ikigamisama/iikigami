@@ -16,16 +16,20 @@ import {
 } from "./MainSectionElements";
 
 const MainSection = () => {
-  const { config } = useContext(ConfigContext);
+  const { config, onFormatColorText } = useContext(ConfigContext);
   return (
     <MainSectionContainer>
       <MainSectionVideoBG>
         <VideoBG autoPlay loop muted src={video} type="video/mp4" />
       </MainSectionVideoBG>
       <MainSectionContent>
-        <SubTitleText color={config.color}>HELLO, WORLD.</SubTitleText>
+        <SubTitleText color={onFormatColorText(config.color)}>
+          HELLO, WORLD.
+        </SubTitleText>
         <MainText>
-          <KeyType color={config.color}>I'm FRANZ MONZALES</KeyType>
+          <KeyType color={onFormatColorText(config.color)}>
+            I'm FRANZ MONZALES
+          </KeyType>
         </MainText>
         <SubText>FULL STACK DEVELOPER | UI / UX DESIGNER</SubText>
         <MainSectionButtonWrapper>

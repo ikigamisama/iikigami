@@ -2,7 +2,8 @@ import React, { lazy } from "react";
 
 import ConfigContextProvider from "../../utils/ConfigContext";
 
-const MainSection = lazy(() => import("../../components/MainSection")),
+const Settings = lazy(() => import("../../components/Settings")),
+  MainSection = lazy(() => import("../../components/MainSection")),
   Profile = lazy(() => import("../../components/Profile")),
   Skills = lazy(() => import("../../components/Skills")),
   Resume = lazy(() => import("../../components/Resume")),
@@ -13,6 +14,7 @@ const MainSection = lazy(() => import("../../components/MainSection")),
 const Home = () => {
   return (
     <ConfigContextProvider>
+      <Settings />
       <MainSection />
       <Profile />
       <Skills />
